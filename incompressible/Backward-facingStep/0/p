@@ -27,13 +27,15 @@ boundaryField
     }
     outlet
     {
-        type           totalPressure;
-        p0             $internalField;
-        phi            phiJm;
-        rho            none;
-        psi            thermo:psi;
-        gamma          0.9;
-        value          $internalField;
+          type           fixedValue;
+          value          uniform 0.714285714;
+//        type           totalPressure;
+//        p0             $internalField;
+//        phi            phiJm;
+//        rho            none;
+//        psi            thermo:psi;
+//        gamma          0.9;
+//        value          $internalField;
     }
     walls
     {

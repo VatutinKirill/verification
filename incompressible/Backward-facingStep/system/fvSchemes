@@ -37,7 +37,7 @@ laplacianSchemes
 
 interpolationSchemes
 {
-    default         none;
+    default         linear;
 }
 
 snGradSchemes
@@ -47,7 +47,9 @@ snGradSchemes
 
 fluxRequired
 {
-    default	none;
+    default	no;
+    pcorr;
+    p;
 }
 
 fvsc

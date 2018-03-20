@@ -25,7 +25,7 @@ stopAt          endTime;
 
 endTime         10;
 
-deltaT          0.01e-05;//2e-05;
+deltaT          0.01e-07;//2e-05;
 
 writeControl    adjustableRunTime;
 
@@ -45,7 +45,7 @@ timePrecision   6;
 
 runTimeModifiable true;
 
-adjustTimeStep  true;
+adjustTimeStep  false;
 
 maxCo           0.3;
 
