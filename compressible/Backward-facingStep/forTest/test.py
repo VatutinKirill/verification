@@ -2,7 +2,7 @@ import sys
 task,vvod = (sys.argv)
 vvod = float(vvod)
 
-calc_file = open("../postProcessing/sampleDict/10/line_U.csv")
+calc_file = open("../postProcessing/sampleDict/3000/line_U.csv")
 res_file = open("./testBFS")
 
 frun = calc_file.readline()
