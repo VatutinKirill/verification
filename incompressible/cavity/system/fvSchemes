@@ -11,47 +11,55 @@ FoamFile
     format      ascii;
     class       dictionary;
     location    "system";
-    object      fvSolution;
+    object      fvSchemes;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
+ddtSchemes
 {
-    p
-    {
-        solver          PCG;
-        preconditioner  DIC;
-        tolerance       1e-10;
-        relTol          0;
-    }
-
-    U
-    {
-        solver          smoothSolver;
-        smoother        symGaussSeidel;
-        tolerance       1e-06;
-        relTol          0;
-    }
-
-    T
-    {
-        solver          smoothSolver;
-        smoother        symGaussSeidel;
-        tolerance       1e-06;
-        relTol          0;
-    }
- 
+    default         Euler;
 }
 
-PISO
+gradSchemes
 {
-    nCorrectors     2;
-    nNonOrthogonalCorrectors 0;
-    pRefCell        0;
-    pRefValue       100000;
+    default         Gauss linear;
 }
 
+divSchemes
+{
+    default         Gauss linear;
+}
 
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
 
-// ************************************************************************* // 
+interpolationSchemes
+{
+    default         linear;
+}
 
+snGradSchemes
+{
+    default         corrected;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
+
+fluxRequired
+{
+        default no;
+        pcorr;
+        p;
+}
+
+fvsc
+{
+    default    leastSquaresOpt;
+}
+
+// ************************************************************************* //

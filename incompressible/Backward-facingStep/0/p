@@ -17,7 +17,7 @@ FoamFile
 
 dimensions      [1 -1 -2 0 0 0 0];
 
-internalField   uniform 0.714285714;
+internalField   uniform 0.714286;
 
 boundaryField
 {
@@ -27,15 +27,8 @@ boundaryField
     }
     outlet
     {
-          type           fixedValue;
-          value          uniform 0.714285714;
-//        type           totalPressure;
-//        p0             $internalField;
-//        phi            phiJm;
-//        rho            none;
-//        psi            thermo:psi;
-//        gamma          0.9;
-//        value          $internalField;
+        type            fixedValue;
+        value           uniform 0.714286;
     }
     walls
     {

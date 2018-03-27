@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     QGDFoam;
+application     QHDFoam;
 
 startFrom       startTime;
 
@@ -23,9 +23,9 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         10;
+endTime         3000;
 
-deltaT          0.01e-07;//2e-05;
+deltaT          0.15;//2e-05;
 
 writeControl    adjustableRunTime;
 

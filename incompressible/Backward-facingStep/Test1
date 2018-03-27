@@ -1,0 +1,26 @@
+rm ./forTest/results
+rm resTest
+
+cp -f -p ./forTest/thermophysicalProperties/100 ./constant/thermophysicalProperties
+./Allclean
+./Allrun
+cd forTest
+python ./test.py 100| tee -a results
+cd ..
+
+cp -f -p ./forTest/thermophysicalProperties/200 ./constant/thermophysicalProperties
+./Allclean
+./Allrun
+cd forTest
+python ./test.py 200| tee -a results
+cd ..
+
+cp -f -p ./forTest/thermophysicalProperties/400 ./constant/thermophysicalProperties
+./Allclean
+./Allrun
+cd forTest
+python ./test.py 400| tee -a results
+python ./ftest.py| tee -a ../resTest
+cd ..
+
+./Allclean
