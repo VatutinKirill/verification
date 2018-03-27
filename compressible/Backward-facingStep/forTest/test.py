@@ -49,17 +49,17 @@ while file1 :
     if 0 <= bb :
         xs = (a2+a1)/2
         px = abs(a1-f)/f
-        if px <= 0.05 :
+        if px <= 0.075 :
             i=1
         else:
-            print('Bad test. Pogreshnost > 5%')
+            print('Bad test. Pogreshnost <= 7.5%')
             print('0')
         break 
     else:
         file1= calc_file.readline()
 
 if i!=0 :
-    print('Good test. pogreshnost <= 5%')
+    print('Good test. pogreshnost <= 7.5%')
     print('1')
 else:
     sys.exit()
