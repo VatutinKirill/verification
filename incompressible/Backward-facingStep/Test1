@@ -20,7 +20,7 @@ cp -f -p ./forTest/thermophysicalProperties/400 ./constant/thermophysicalPropert
 ./Allrun
 cd forTest
 python ./test.py 400| tee -a results
-python ./ftest.py| tee -a ../resTest
+python ./ftest1.py| tee -a ../resTest
 cd ..
 
 ./Allclean

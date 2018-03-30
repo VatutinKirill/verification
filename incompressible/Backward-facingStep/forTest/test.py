@@ -59,7 +59,7 @@ while file1 :
         file1= calc_file.readline()
 
 if i!=0 :
-    print('Good test. pogreshnost <= 7.5%')
+    print('Good test. pogreshnost => 7.5%')
     print('1')
 else:
     sys.exit()
